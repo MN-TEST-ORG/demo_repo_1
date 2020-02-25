@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="demo_repo_1.MN_HDB_MOD::MN_CV_1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="MN_CV_1"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="demo_repo_1.MN_HDB_MOD::student_data">
+    <resourceUri>demo_repo_1.MN_HDB_MOD::student_data</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="demo_repo_1.MN_HDB_MOD::student_data">
+  <attributes>
+    <attribute id="STUDENT_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STUDENT_ID"/>
+      <keyMapping columnObjectName="student_data" columnName="STUDENT_ID"/>
+    </attribute>
+    <attribute id="STUDENT_FIRST_NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STUDENT_FIRST_NAME"/>
+      <keyMapping columnObjectName="student_data" columnName="STUDENT_FIRST_NAME"/>
+    </attribute>
+    <attribute id="STUDENT_LAST_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STUDENT_LAST_NAME"/>
+      <keyMapping columnObjectName="student_data" columnName="STUDENT_LAST_NAME"/>
+    </attribute>
+    <attribute id="STUDENT_AGE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STUDENT_AGE"/>
+      <keyMapping columnObjectName="student_data" columnName="STUDENT_AGE"/>
+    </attribute>
+    <attribute id="STUDENT_CLASS" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STUDENT_CLASS"/>
+      <keyMapping columnObjectName="student_data" columnName="STUDENT_CLASS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="CC_AGE_GROUP" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age Group"/>
+      <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="13">
+        <formula>if(&quot;STUDENT_AGE&quot;&gt;10,'Senior','Junior')</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
