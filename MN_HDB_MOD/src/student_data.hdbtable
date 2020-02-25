@@ -1,0 +1,8 @@
+column table "demo_repo_1.MN_HDB_MOD::student_data"
+(
+	student_id nvarchar(10) primary key,
+	student_first_name nvarchar(25),
+	student_last_name nvarchar(25),
+	student_age int,
+	student_class int
+)

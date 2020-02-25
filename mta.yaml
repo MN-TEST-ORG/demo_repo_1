@@ -1,0 +1,16 @@
+ID: demo_repo_1
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: MN_HDB_MOD
+   type: hdb
+   path: MN_HDB_MOD
+   requires:
+    - name: hdi_MN_HDB_MOD
+
+resources:
+ - name: hdi_MN_HDB_MOD
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
