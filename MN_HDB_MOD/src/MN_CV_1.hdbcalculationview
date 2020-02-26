@@ -39,6 +39,12 @@
         <formula>if(&quot;STUDENT_AGE&quot;&gt;10,'Senior','Junior')</formula>
       </keyCalculation>
       </calculatedAttribute>
+    <calculatedAttribute id="CC_DUMMY" order="7" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Dummy Calc Col"/>
+      <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="13">
+        <formula>1</formula>
+      </keyCalculation>
+      </calculatedAttribute>
   </calculatedAttributes>
   <baseMeasures/>
   <calculatedMeasures/>
